@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const saltRounds = 10;
 const jwt = require('jsonwebtoken');
 const moment = require("moment");
@@ -64,8 +64,6 @@ userSchema.methods.comparePassword = function(plainPassword,cb){
 
 userSchema.methods.generateToken = function(cb) {
     var user = this;
-    console.log('user',user)
-    console.log('userSchema', userSchema)
     var token =  jwt.sign(user._id.toHexString(),'secret')
     var oneHour = moment().add(1, 'hour').valueOf();
 
