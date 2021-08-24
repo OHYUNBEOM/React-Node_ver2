@@ -70,8 +70,8 @@ function FavoritePage() {
             <table>
                 <thead>
                     <tr>
-                        <th>Movie Title</th>
-                        <th>Movie RunTime</th>
+                        <th>Menu Name(메뉴이름)</th>
+                        <th>Cooking Time(제조 시간)</th>
                         <td>Remove from favorites</td>
                     </tr>
                 </thead>
