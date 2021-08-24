@@ -82,7 +82,7 @@ function Favorite(props) {
 
     return (
         <div>
-            <Button onClick={onClickFavorite}>{Favorited ? " Not Favorite" : "Add to Favorite "}  {FavoriteNumber}  </Button>
+            <Button onClick={onClickFavorite}>{Favorited ? " 즐겨찾기 해제" : "즐겨찾기 추가 "}  {FavoriteNumber}  </Button>
 
         </div>
     )

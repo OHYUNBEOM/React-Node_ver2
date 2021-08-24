@@ -125,16 +125,16 @@ function LoginPage(props) {
               )}
 
               <Form.Item>
-                <Checkbox id="rememberMe" onChange={handleRememberMe} checked={rememberMe} >Remember me</Checkbox>
+                <Checkbox id="rememberMe" onChange={handleRememberMe} checked={rememberMe} >로그인 정보 기억</Checkbox>
                 <a className="login-form-forgot" href="/reset_user" style={{ float: 'right' }}>
-                  forgot password
+                  비밀번호를 잊어버렸습니다.
                   </a>
                 <div>
                   <Button type="primary" htmlType="submit" className="login-form-button" style={{ minWidth: '100%' }} disabled={isSubmitting} onSubmit={handleSubmit}>
-                    Log in
+                    로그인
                 </Button>
                 </div>
-                Or <a href="/register">register now!</a>
+                또는 <a href="/register">회원 가입!</a>
               </Form.Item>
             </form>
           </div>

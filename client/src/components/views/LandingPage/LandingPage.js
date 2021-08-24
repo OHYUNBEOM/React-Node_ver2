@@ -54,7 +54,7 @@ function LandingPage() {
 
             <div style={{ width: '85%', margin: '1rem auto' }}>
 
-                <h2>Movies by latest</h2>
+                <h2>Latest Registered Menus (등록된 메뉴)</h2>
                 <hr />
 
                 {/* Movie Grid Cards */}
@@ -78,7 +78,7 @@ function LandingPage() {
             </div>
 
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <button onClick={loadMoreItems}> Load More</button>
+                <button onClick={loadMoreItems}> Load More(더보기)</button>
             </div>
 
         </div>

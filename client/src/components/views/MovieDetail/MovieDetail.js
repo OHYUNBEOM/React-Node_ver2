@@ -9,8 +9,8 @@ import GridCards from '../commons/GridCards';
 import MainImage from '../../views/LandingPage/Sections/MainImage';
 import MovieInfo from './Sections/MovieInfo';
 import Favorite from './Sections/Favorite';
-function MovieDetailPage(props) {
 
+function MovieDetailPage(props) {
     const movieId = props.match.params.movieId
     const [Movie, setMovie] = useState([])
     const [Casts, setCasts] = useState([])
@@ -23,10 +23,8 @@ function MovieDetailPage(props) {
     }
 
     useEffect(() => {
-
         let endpointForMovieInfo = `${API_URL}movie/${movieId}?api_key=${API_KEY}&language=en-US`;
         fetchDetailInfo(endpointForMovieInfo)
-
         axios.post('/api/comment/getComments', movieVariable)
             .then(response => {
                 console.log(response)
@@ -37,7 +35,6 @@ function MovieDetailPage(props) {
                     alert('Failed to get comments Info')
                 }
             })
-
     }, [])
 
     const toggleActorView = () => {
@@ -45,14 +42,12 @@ function MovieDetailPage(props) {
     }
 
     const fetchDetailInfo = (endpoint) => {
-
         fetch(endpoint)
             .then(result => result.json())
             .then(result => {
                 console.log(result)
                 setMovie(result)
                 setLoadingForMovie(false)
-
                 let endpointForCasts = `${API_URL}movie/${movieId}/credits?api_key=${API_KEY}`;
                 fetch(endpointForCasts)
                     .then(result => result.json())
@@ -60,7 +55,6 @@ function MovieDetailPage(props) {
                         console.log(result)
                         setCasts(result.cast)
                     })
-
                 setLoadingForCasts(false)
             })
             .catch(error => console.error('Error:', error)
@@ -102,9 +96,8 @@ function MovieDetailPage(props) {
 
                 <br />
                 {/* Actors Grid*/}
-
                 <div style={{ display: 'flex', justifyContent: 'center', margin: '2rem' }}>
-                    <Button onClick={toggleActorView}>Toggle Actor View </Button>
+                    <Button onClick={toggleActorView}>원재료 목록보기</Button>
                 </div>
 
                 {ActorToggle &&
