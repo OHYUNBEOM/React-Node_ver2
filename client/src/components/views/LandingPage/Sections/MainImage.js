@@ -3,11 +3,12 @@ import React from 'react';
 function MainImage(props) {
     return (
         <div style={{
-            background: `linear-gradient(to bottom, rgba(0,0,0,0)
-        39%,rgba(0,0,0,0)
-        41%,rgba(0,0,0,0.65)
-        100%),
-        url('${props.image}'), #1c1c1c`,
+        //     background: `linear-gradient(to bottom, rgba(0,0,0,0)
+        // 39%,rgba(0,0,0,0)
+        // 41%,rgba(0,0,0,0.65)
+        // 100%),
+        // url('${props.image}'), #1c1c1c`,
+            
             height: '500px',
             backgroundSize: '100%, cover',
             backgroundPosition: 'center, center',
@@ -16,8 +17,11 @@ function MainImage(props) {
         }}>
             <div>
                 <div style={{ position: 'absolute', maxWidth: '500px', bottom: '2rem', marginLeft: '2rem' }}>
-                    <h2 style={{ color: 'white' }}>  {props.title} </h2>
-                    <p style={{ color: 'white', fontSize: '1rem' }}> {props.text}</p>
+                    <h2 style={{ color: 'white' }}>Menu_Name</h2>
+                    <p style={{ color: 'white', fontSize: '1rem' }}> Allergy_Information</p>
+                    {/* <h2 style={{ color: 'white' }}>  {props.title} </h2>
+                    <p style={{ color: 'white', fontSize: '1rem' }}> {props.text}</p> */}
+                    {/* props.title : mainImage 의 title, props.text : mainImage 의 text */}
                 </div>
             </div>
         </div>
