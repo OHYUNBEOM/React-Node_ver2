@@ -4,3 +4,5 @@ api 키 : dd21bad55619f84e6e2823be028cbba2
 api로 가져오는 정보 : Get Movie By Latest( 최신순 ) / Get Movie Detail( 세부사항 )
                      Get Movie Reviews ( 리뷰 ) / Get Trending ( 트렌드 )
                 
+
+client/src/components/views/Moviedetail,FavoritePage,commons 참조 api 제작 필요
