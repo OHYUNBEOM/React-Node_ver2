@@ -13,10 +13,17 @@
   float: left;
 }
 
-.menu__logo a {
+/* .menu__logo a {
   display: inline-block;
   font-size: 15px;
   padding: 19px 20px;
+} */
+
+.menu__logo img {
+  padding-left: 30px;
+  width:100px;
+  height:70px;
+  float:top;
 }
 
 .menu__container .ant-menu-item {
@@ -81,7 +88,10 @@
     padding: 1px 20px;
   }
 
-  .menu__logo a {
-    padding: 10px 20px;
+  .menu__logo img {
+    padding-left: 30px;
+    width:100px;
+    height:70px;
+    float:top;
   }
 }
