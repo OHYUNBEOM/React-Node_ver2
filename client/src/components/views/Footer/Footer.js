@@ -8,7 +8,7 @@ function Footer() {
             flexDirection: 'column', alignItems: 'center',
             justifyContent: 'center', fontSize:'1rem'
         }}>
-            <p> DBLAB_PROJECT <Icon type="smile" /></p>
+            <p> AR_DISH <Icon type="smile" /></p>
         </div>
     )
 }
