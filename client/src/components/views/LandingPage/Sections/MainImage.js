@@ -1,4 +1,5 @@
 import React from 'react';
+import mainlogo from '../../../../assets/images/mainlogo.png';
 
 function MainImage(props) {
     return (
@@ -15,6 +16,9 @@ function MainImage(props) {
             width: '100%',
             position: 'relative'
         }}>
+            <a href="/">
+                <img src={mainlogo}/>
+            </a>
             <div>
                 <div style={{ position: 'absolute', maxWidth: '500px', bottom: '2rem', marginLeft: '2rem' }}>
                     <h2 style={{ color: 'black' }}>Menu_Name(메뉴이름)</h2>
