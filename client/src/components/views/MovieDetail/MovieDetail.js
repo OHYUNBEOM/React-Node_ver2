@@ -95,26 +95,6 @@ function MovieDetailPage(props) {
                 }
 
                 <br />
-                {/* Actors Grid*/}
-                <div style={{ display: 'flex', justifyContent: 'center', margin: '2rem' }}>
-                    <Button onClick={toggleActorView}>원재료 목록보기</Button>
-                </div>
-
-                {ActorToggle &&
-                    <Row gutter={[16, 16]}>
-                        {
-                            !LoadingForCasts ? Casts.map((cast, index) => (
-                                cast.profile_path &&
-                                <GridCards
-                                    image={cast.profile_path ?
-                                        `${IMAGE_BASE_URL}w500${cast.profile_path}` : null}
-                                    characterName={cast.name}
-                                />)) :
-                                <div>loading...</div>
-                        }
-                    </Row>
-                }
-                <br />
 
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                     <LikeDislikes video videoId={movieId} userId={localStorage.getItem('userId')} />
