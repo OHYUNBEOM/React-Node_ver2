@@ -23,7 +23,7 @@ function MovieDetailPage(props) {
     }
 
     useEffect(() => {
-        let endpointForMovieInfo = `${API_URL}movie/${movieId}?api_key=${API_KEY}&language=en-US`;
+        let endpointForMovieInfo = `${API_URL}movie/${movieId}?api_key=${API_KEY}&language=en-US`;//해당 {API} 부분 변경하여 API 를 받아오는것이 문제..
         fetchDetailInfo(endpointForMovieInfo)
         axios.post('/api/comment/getComments', movieVariable)
             .then(response => {
@@ -48,7 +48,7 @@ function MovieDetailPage(props) {
                 console.log(result)
                 setMovie(result)
                 setLoadingForMovie(false)
-                let endpointForCasts = `${API_URL}movie/${movieId}/credits?api_key=${API_KEY}`;
+                let endpointForCasts = `${API_URL}movie/${movieId}/credits?api_key=${API_KEY}`;//해당 {API} 부분 변경하여 API 를 받아오는것이 문제..
                 fetch(endpointForCasts)
                     .then(result => result.json())
                     .then(result => {
@@ -70,7 +70,7 @@ function MovieDetailPage(props) {
             {/* Header */}
             {!LoadingForMovie ?
                 <MainImage
-                    image={`${IMAGE_BASE_URL}${IMAGE_SIZE}${Movie.backdrop_path}`}
+                    image={`${IMAGE_BASE_URL}${IMAGE_SIZE}${Movie.backdrop_path}`}//해당 {API} 부분 변경하여 API 를 받아오는것이 문제..
                     title={Movie.original_title}
                     text={Movie.overview}
                 />
