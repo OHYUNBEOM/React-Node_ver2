@@ -33,7 +33,7 @@ function LandingPage() {
 
     const loadMoreItems = () => {
 
-        const endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${CurrentPage + 1}`;
+        const endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${CurrentPage + 1}`;//해당 {API} 부분 변경하여 API 를 받아오는것이 문제..
         fetchMovies(endpoint)
 
     }
