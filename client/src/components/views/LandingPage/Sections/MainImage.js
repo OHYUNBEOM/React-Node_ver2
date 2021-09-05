@@ -21,8 +21,8 @@ function MainImage(props) {
             </a>
             <div>
                 <div style={{ position: 'absolute', maxWidth: '500px', bottom: '2rem', marginLeft: '2rem' }}>
-                    <h2 style={{ color: 'black' }}>Menu_Name(메뉴이름)</h2>
-                    <p style={{ color: 'black', fontSize: '1rem' }}> Allergy_Information(알러지 정보)</p>
+                    <h2 style={{ color: 'black' }}>[메뉴이름]</h2>
+                    <p style={{ color: 'black', fontSize: '1rem' }}> [알러지 정보]</p>
                     {/* <h2 style={{ color: 'white' }}>  {props.title} </h2>
                     <p style={{ color: 'white', fontSize: '1rem' }}> {props.text}</p> */}
                     {/* props.title : mainImage 의 title, props.text : mainImage 의 text */}
