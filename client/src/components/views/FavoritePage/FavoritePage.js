@@ -15,7 +15,7 @@ function FavoritePage() {
                 if (response.data.success) {
                     setFavorites(response.data.favorites)
                 } else {
-                    alert('영화 정보를 가져오는데 실패 했습니다.')
+                    alert('메뉴 정보를 가져오는데 실패 했습니다.')
                 }
             })
     }
@@ -54,7 +54,7 @@ function FavoritePage() {
                 <td>{favorite.movieTitle}</td>
             </Popover> {/* Popover 로 감싸주게되면 커서를 올렸을때, content 에 넣어둔 사진과함께 title 이 보여짐 */}
 
-            <td>{favorite.movieRunTime} mins</td>
+            <td>{favorite.movieRunTime} 분</td>
             <td><button onClick={() => onClickDelete(favorite.movieId, favorite.userFrom)}>Remove</button></td>
 
         </tr>
@@ -70,9 +70,9 @@ function FavoritePage() {
             <table>
                 <thead>
                     <tr>
-                        <th>Menu Name(메뉴이름)</th>
-                        <th>Cooking Time(제조 시간)</th>
-                        <td>Remove from favorites</td>
+                        <th>[메뉴이름]</th>
+                        <th>[제조 시간]</th>
+                        <td>[즐겨찾기 삭제]</td>
                     </tr>
                 </thead>
                 <tbody>
