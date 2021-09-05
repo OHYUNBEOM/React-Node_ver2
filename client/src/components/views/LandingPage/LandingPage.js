@@ -54,7 +54,7 @@ function LandingPage() {
 
             <div style={{ width: '85%', margin: '1rem auto' }}>
 
-                <h2>AR_DISH 등록메뉴</h2>
+                <h2>AR_DISH</h2>
                 <hr />
 
                 {/* Movie Grid Cards */}
