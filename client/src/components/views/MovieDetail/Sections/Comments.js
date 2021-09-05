@@ -42,7 +42,7 @@ function Comments(props) {
     return (
         <div>
             <br />
-            <Title level={3} > Share your opinions about Menu(메뉴 평가) </Title>
+            <Title level={3} > [메뉴 평가] </Title>
             {/* <Title level={3} > Share your opinions about {props.movieTitle} </Title> * 기존 소스/}
             <hr />
             {/* Comment Lists  */}
@@ -59,7 +59,7 @@ function Comments(props) {
 
             {props.CommentLists && props.CommentLists.length === 0 &&
                 <div style={{ display: 'flex', justifyContent:'center', alignItems:'center', height:'200px'}} >
-                    Be the first one who shares your thought about this Menu
+                    메뉴에 대한 의견을 처음으로 등록해보세요!
                 </div>
             }
 
@@ -72,7 +72,7 @@ function Comments(props) {
                     placeholder="write some comments"
                 />
                 <br />
-                <Button style={{ width: '20%', height: '52px' }} onClick={onSubmit}>Submit</Button>
+                <Button style={{ width: '20%', height: '52px' }} onClick={onSubmit}>전송</Button>
             </form>
 
         </div>
