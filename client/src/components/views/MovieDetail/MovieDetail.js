@@ -23,7 +23,7 @@ function MovieDetailPage(props) {
     }
 
     useEffect(() => {
-        let endpointForMovieInfo = `${API_URL}movie/${movieId}?api_key=${API_KEY}&language=en-US`;//해당 {API} 부분 변경하여 API 를 받아오는것이 문제..
+        let endpointForMovieInfo = `${API_URL}movie/${movieId}?api_key=${API_KEY}&language=en-US`;//해당 부분 API_URL/API_KEY(많이 사용하여 config.js 파일에 선언해둠) 과 movie/popular? 등 그외의 소스를 규리가 작성해놓은 파일의 주소로 변환해서 받아와야하는데 어떻게 해야할지를 모르겠습니다 ㅠㅠ 
         fetchDetailInfo(endpointForMovieInfo)
         axios.post('/api/comment/getComments', movieVariable)
             .then(response => {
@@ -48,7 +48,7 @@ function MovieDetailPage(props) {
                 console.log(result)
                 setMovie(result)
                 setLoadingForMovie(false)
-                let endpointForCasts = `${API_URL}movie/${movieId}/credits?api_key=${API_KEY}`;//해당 {API} 부분 변경하여 API 를 받아오는것이 문제..
+                let endpointForCasts = `${API_URL}movie/${movieId}/credits?api_key=${API_KEY}`;//해당 부분 API_URL/API_KEY(많이 사용하여 config.js 파일에 선언해둠) 과 movie/popular? 등 그외의 소스를 규리가 작성해놓은 파일의 주소로 변환해서 받아와야하는데 어떻게 해야할지를 모르겠습니다 ㅠㅠ 
                 fetch(endpointForCasts)
                     .then(result => result.json())
                     .then(result => {
@@ -70,7 +70,7 @@ function MovieDetailPage(props) {
             {/* Header */}
             {!LoadingForMovie ?
                 <MainImage
-                    image={`${IMAGE_BASE_URL}${IMAGE_SIZE}${Movie.backdrop_path}`}//해당 {API} 부분 변경하여 API 를 받아오는것이 문제..
+                    image={`${IMAGE_BASE_URL}${IMAGE_SIZE}${Movie.backdrop_path}`}//기존에 받아와서 사용하던 API 는 .backdrop_path 를 통해서 사진을 불러올 수 있었는데 새로 가져와야하는 api 쪽에서는 어떻게 가져오는지..
                     title={Movie.original_title}
                     text={Movie.overview}
                 />

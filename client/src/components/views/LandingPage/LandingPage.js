@@ -14,7 +14,7 @@ function LandingPage() {
     const [CurrentPage, setCurrentPage] = useState(0)
 
     useEffect(() => {
-        const endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+        const endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;//해당 부분 API_URL/API_KEY(많이 사용하여 config.js 파일에 선언해둠) 과 movie/popular? 등 그외의 소스를 규리가 작성해놓은 파일의 주소로 변환해서 받아와야하는데 어떻게 해야할지를 모르겠습니다 ㅠㅠ 
         fetchMovies(endpoint)
 
     }, [])
@@ -33,7 +33,7 @@ function LandingPage() {
 
     const loadMoreItems = () => {
 
-        const endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${CurrentPage + 1}`;//해당 {API} 부분 변경하여 API 를 받아오는것이 문제..
+        const endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${CurrentPage + 1}`;//해당 부분 API_URL/API_KEY(많이 사용하여 config.js 파일에 선언해둠) 과 movie/popular? 등 그외의 소스를 규리가 작성해놓은 파일의 주소로 변환해서 받아와야하는데 어떻게 해야할지를 모르겠습니다 ㅠㅠ
         fetchMovies(endpoint)
 
     }
@@ -41,16 +41,16 @@ function LandingPage() {
 
     return (
         <div style={{ width: '100%', margin: '0' }}>
-
             {/* Main Image */}
             {MainMovieImage &&
                 <MainImage
-                    image={`${IMAGE_BASE_URL}w1280${MainMovieImage.backdrop_path}`}
-                    title={MainMovieImage.original_title}
+                    image={`${IMAGE_BASE_URL}w1280${MainMovieImage.backdrop_path}`}//해당 부분 IMAGE_BASE_URL(많이 사용하여 config.js 파일에 선언해둠) 과 movie/popular? 등 그외의 소스를 규리가 작성해놓은 파일의 주소로 변환해서 받아와야하는데 어떻게 해야할지를 모르겠습니다 ㅠㅠ
+                    title={MainMovieImage.original_title}//title , text 또한 기존에 받아왔던 영화정보 api 사이트에서는 제목과 설명을 original_title과 overview로 설정해두었는데 어떻게 변경해야하는지
                     text={MainMovieImage.overview}
                 />
             }
-
+            
+7
 
             <div style={{ width: '85%', margin: '1rem auto' }}>
 
@@ -66,9 +66,9 @@ function LandingPage() {
                             <GridCards
                                 landingPage
                                 image={movie.poster_path ?
-                                    `${IMAGE_BASE_URL}w500${movie.poster_path}` : null}
-                                movieId={movie.id}
-                                movieName={movie.original_title}
+                                    `${IMAGE_BASE_URL}w500${movie.poster_path}` : null}//위와동일
+                                movieId={movie.id}//위와동일
+                                movieName={movie.original_title}//위와동일
                             />
                         </React.Fragment>
                     ))}
