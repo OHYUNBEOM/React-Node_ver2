@@ -42,7 +42,7 @@ function SingleComment(props) {
 
     const actions = [
         <LikeDislikes comment commentId={props.comment._id} userId={localStorage.getItem('userId')} />,
-        <span onClick={openReply} key="comment-basic-reply-to">Reply to(답글)</span>
+        <span onClick={openReply} key="comment-basic-reply-to">댓글</span>
     ]
 
     return (
@@ -73,7 +73,7 @@ function SingleComment(props) {
                         placeholder="write some comments"
                     />
                     <br />
-                    <Button style={{ width: '20%', height: '52px' }} onClick={onSubmit}>Submit(제출)</Button>
+                    <Button style={{ width: '20%', height: '52px' }} onClick={onSubmit}>제출</Button>
                 </form>
             }
 
