@@ -54,7 +54,7 @@ function FavoritePage() {
                 <td>{favorite.movieTitle}</td>
             </Popover> {/* Popover 로 감싸주게되면 커서를 올렸을때, content 에 넣어둔 사진과함께 title 이 보여짐 */}
 
-            <td>{favorite.movieRunTime} 분</td>
+            <td>{favorite.movieRunTime} 분(min)</td>
             <td><button onClick={() => onClickDelete(favorite.movieId, favorite.userFrom)}>Remove</button></td>
 
         </tr>
@@ -64,13 +64,13 @@ function FavoritePage() {
 
     return (
         <div style={{ width: '85%', margin: '3rem auto' }}>
-            <h2> Favorite Movies </h2>
+            <h2> 즐겨찾기 메뉴 </h2>
             <hr />
 
             <table>
                 <thead>
                     <tr>
-                        <th>[메뉴이름]</th>
+                        <th>[메뉴 이름]</th>
                         <th>[제조 시간]</th>
                         <td>[즐겨찾기 삭제]</td>
                     </tr>
